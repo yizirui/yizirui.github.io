@@ -99,7 +99,7 @@ work:
     company_name: League of Southeastern Credit Unions
     company_url: ''
     company_logo: ''
-    date_start: 2024-09
+    date_start: 2024-09-03
     date_end: ''
     summary: |
       Responsibilities include:
