@@ -62,8 +62,8 @@ education:
   #     url: 'https://example.com'
   - area: MS Eng in Computer Science
     institution: Johns Hopkins University
-    date_start: 2022-08
-    date_end: 2024-07
+    date_start: 2022-08-23
+    date_end: 2024-07-23
     summary: |
       GPA: 3.9/4.0
 
@@ -74,8 +74,8 @@ education:
     date_start: 2019-07
   - area: BSc Computer Science
     institution: University of Nottingham
-    date_start: 2018-09
-    date_end: 2022-07
+    date_start: 2018-09-26
+    date_end: 2022-07-17
     summary: |
       GPA: 3.7/4.0
       
@@ -88,13 +88,11 @@ work:
     company_name: Social Cognitive AI (SCAI) Lab at Johns Hopkins University
     company_url: ''
     company_logo: ''
-    date_start: 2021-01-01
+    date_start: 2024-01-01
     date_end: ''
     summary: |2-
       Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Working ICRA pub, AAAI Symposium pub accepted: UnclearInstruct: An Embodied Assistance Challenge
   - position: Full-stack Software Engineer
     company_name: League of Southeastern Credit Unions
     company_url: ''
