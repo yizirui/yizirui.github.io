@@ -118,7 +118,7 @@ skills:
         description: ''
         percent: 40
         icon: circle-stack
-      - JavaScript
+      - name: JavaScript
         description: ''
         percent: 40
         icon: code-bracket
