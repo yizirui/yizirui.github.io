@@ -38,9 +38,9 @@ profiles:
   - icon: brands/github
     url: https://github.com/yizirui
   - icon: brands/linkedin
-    url: hhttps://www.linkedin.com/in/easey-f/
+    url: https://www.linkedin.com/in/easey-f/
   - icon: academicons/google-scholar
-    url: hhttps://scholar.google.com/citations?user=C9Wb_2cAAAAJ&hl=en
+    url: https://scholar.google.com/citations?user=C9Wb_2cAAAAJ&hl=en
   # - icon: academicons/orcid
   #   url: https://orcid.org/
 
