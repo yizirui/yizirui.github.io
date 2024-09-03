@@ -96,7 +96,7 @@ work:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
   - position: Full-stack Software Engineer
-    company_name: 
+    company_name: League of Southeastern Credit Unions
     company_url: ''
     company_logo: ''
     date_start: 2024-09
