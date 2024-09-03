@@ -3,10 +3,10 @@
 title: Yizirui Fang
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Easir Rey Fang
 
 # Full name (for SEO)
-first_name: Easir Rey
+first_name: Yizirui
 last_name: Fang
 
 # Status emoji
@@ -174,3 +174,5 @@ languages:
 ## About Me
 
 Yizirui Fang is a recent CS Master graduate from Johns Hopkins University. They are passionate about making machine learning human-centered and friendly. To this end, I expanded my interest in  embodied AI, trustworthy and probabilistic machine learning and uncertainty quantification including conformal prediction.
+
+I'm actively applying for PhD opportunities in 2025 Spring/Fall admission cycle.
