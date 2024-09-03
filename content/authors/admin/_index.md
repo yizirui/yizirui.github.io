@@ -71,7 +71,8 @@ education:
       - Trustworthy AI
   - area: Applied Statistics and Machine Learning
     institution: Imperial College London
-    date_start: 2019-07
+    date_start: 2019-07-21
+    date_end: ''
   - area: BSc Computer Science
     institution: University of Nottingham
     date_start: 2018-09-26
