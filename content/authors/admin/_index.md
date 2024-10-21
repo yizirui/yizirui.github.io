@@ -33,7 +33,7 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:yfang52@jhu.edu'
+    url: 'mailto:easey.fang24@gmail.com'
     label: E-mail Me
   - icon: brands/x
     url: https://twitter.com/GetResearchDev
@@ -95,7 +95,7 @@ work:
     date_end: ''
     summary: |2-
       Responsibilities include:
-      - Working ICRA pub, AAAI Symposium pub accepted: UnclearInstruct: An Embodied Assistance Challenge
+      - ICRA under review, SIFToM: Robust Spoken Instruction Following through Theory of Mind, AAAI Symposium pub accepted as: UnclearInstruct: An Embodied Assistance Challenge
   - position: Full-stack Software Engineer
     company_name: League of Southeastern Credit Unions
     company_url: ''
