@@ -36,7 +36,7 @@ profiles:
     url: 'mailto:yfang52@jhu.edu'
     label: E-mail Me
   - icon: brands/x
-    url: https://twitter.com/GetResearchDev
+    url: https://twitter.com/YiziruiF
   - icon: brands/github
     url: https://github.com/yizirui
   - icon: brands/linkedin
