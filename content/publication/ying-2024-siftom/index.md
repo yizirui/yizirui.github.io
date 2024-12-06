@@ -14,6 +14,8 @@ publication_types:
 - article-journal
 publication: '*arXiv preprint arXiv:2409.10849*'
 links:
+- name: project
+  url: https://www.lanceying.com/siftom
 - name: URL
   url: https://arxiv.org/abs/2409.10849
 ---
