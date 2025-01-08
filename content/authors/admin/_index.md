@@ -78,7 +78,16 @@ education:
       - Computer Vision
   
 work:
-  - position: Student Researcher
+  - position: Software Dev Engineer
+    company_name: Amazon.com
+    company_url: ''
+    company_logo: ''
+    date_start: 2024-12-30
+    date_end: ''
+    summary: |
+      Responsibilities include:
+      - Developed RESTful API for Amazon’s global distributed warehouse inventory management, tracking system and cost component with Java and AWS in collaboration with 2 cross-functional teams
+  - position: Research Assistant
     company_name: Social Cognitive AI (SCAI) Lab at Johns Hopkins University
     company_url: ''
     company_logo: ''
@@ -86,16 +95,34 @@ work:
     date_end: ''
     summary: |2-
       Responsibilities include:
-      - Working ICRA pub, AAAI Symposium pub accepted: UnclearInstruct: An Embodied Assistance Challenge
-  - position: Full-stack Software Engineer
-    company_name: League of Southeastern Credit Unions
+      - Pending ICRA pubication, AAAI Symposium pubication accepted: UnclearInstruct: An Embodied Assistance Challenge
+      - Proposed a Spoken Instruction Following through Theory of Mind (SIFToM) model to interpreate acoustic wave and human auditory perception to infer robot goals via Bayesian inverse planning algorithm’ on simulated and real-world data advised by Prof. Tianmin Shu at Johns Hopkins University
+  - position: Research Assistant
+    company_name: Learning to Defer with an Uncertain Rejector via Conformal Prediction
     company_url: ''
     company_logo: ''
-    date_start: 2024-09-03
+    date_start: 2024-01-01
     date_end: ''
     summary: |
       Responsibilities include:
-      - Developed and maintained Restful APIs
+      - Proposed a uncertainty-based distribution-free post-train component for learning to defer in enhancing the collaborative performance of human and AI team and rendering safer decisions on tasks ranging from object to hate speech detection via uncertainly quantification, advised by Prof. Eric Nalisnick at Johns Hopkins University
+      - Developed surrogate loss functions in Bayesion sub-optimal approaches for learning to defer problem on wide ResNet, human expert simulators and data augmentation with PyTorch
+      - Proposed active learning pipeline with uncertainty quantification methods including batch ensemble, SNGP, MC-Dropout, and BNN for Wide ResNet on CIFAR-10/100 dataset using TensorFlow and Python
+      - Developed and automated experiments on CIFAR10 w/ corruption, human, Hate Speech, and Street View dataset
+      - Surveyed distribution shift on wide ResNet using OpenCV and visualized using matplotlib and seaborn
+      - Automated and distributed experiments over GPUs with Slurm, Shell, and Docker at Linux HPC
+  - position: Research Assistant
+    company_name: Augmentation for Distribution Drift in Credit Scoring
+    company_url: ''
+    company_logo: ''
+    date_start: 2024-12-30
+    date_end: ''
+    summary: |
+      Responsibilities include:
+      - Proposed data augmentation algorithms with kernel density estimation against distribution drift of credit scoring models, and improve the AUC of ML models from 0.73 to 0.85 with LightGBM and PyTorch under various economic factors
+      - Surveyed credit risk models in gradient boosting, neural network algorithm with Python, PyTorch, NumPy
+      - Analysis and visualize experimental data statistically with Pandas and matplotlib
+      - Created large-scale databases for ∼2 bn financial time-series data points with Spark and SQLAlchemy
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
