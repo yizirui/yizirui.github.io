@@ -48,9 +48,10 @@ profiles:
 
 interests:
   - Embodied AI
-  - Uncertainty Quantification
-  - Probabilistic Machine Learning
+  - Human-centered Machine Learning
+  - Bayesian Decision Making
   - Robustness under Distribution Shift
+  - Uncertainty Quantification
 
 education:
   - area: MS Eng in Computer Science
@@ -165,6 +166,6 @@ languages:
 
 ## About Me
 
-Yizirui Fang is a recent CS Master graduate from Johns Hopkins University. They are passionate about making machine learning human-centered and friendly. To this end, I expanded my interest in  embodied AI, trustworthy and probabilistic machine learning and uncertainty quantification including conformal prediction.
+Yizirui Fang is a recent CS Master graduate from Johns Hopkins University. They are passionate about human-centered machine learning and its application. To this end, they expanded my interest in  embodied AI, trustworthy and probabilistic machine learning and uncertainty quantification including conformal prediction.
 
-I'm actively applying for PhD opportunities in 2025 Spring/Fall admission cycle.
+I'm actively applying for PhD opportunities in 2026 Spring/Fall admission cycle.
