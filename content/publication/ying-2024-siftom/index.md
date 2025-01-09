@@ -15,7 +15,7 @@ publication_types:
 publication: '*arXiv preprint arXiv:2409.10849*'
 links:
 - name: Project
-  url: https://www.yiziruifang.com/siftom
+  url: https://www.yiziruifang.com/projects/siftom
 - name: URL
   url: https://arxiv.org/abs/2409.10849
 ---
