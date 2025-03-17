@@ -86,7 +86,7 @@ work:
     date_end: ''
     summary: |
       Responsibilities include:
-      - Developed RESTful API for Amazon’s global distributed warehouse inventory management, tracking system and cost component with Java and AWS in collaboration with 2 cross-functional teams
+      - Developed RESTful APIs and Java packages for Amazon’s global warehouses inventory controlership management, tracking system with Java, Ant,Jackson, Mockito and AWS in collaboration with 2 cross-functional teams
   - position: Research Assistant
     company_name: Social Cognitive AI (SCAI) Lab at Johns Hopkins University
     company_url: ''
@@ -194,5 +194,3 @@ languages:
 ## About Me
 
 Yizirui Fang is a recent CS Master graduate from Johns Hopkins University. They are passionate about human-centered machine learning and its application. To this end, they expanded my interest in  embodied AI, trustworthy and probabilistic machine learning and uncertainty quantification including conformal prediction.
-
-I'm actively applying for PhD opportunities in 2026 Spring/Fall admission cycle.

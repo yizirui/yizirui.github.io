@@ -16,6 +16,8 @@ publication_types:
 publication: '*iRAISE 2025: Innovation and Responsibility for AI-Supported Education
   at the 39th AAAI Annual Conference on AI*'
 links:
+- name: Project
+  url: https://www.hichipli.com/publications/aaai2025
 - name: URL
   url: https://openreview.net/forum?id=AtpVLle6G3
 ---
