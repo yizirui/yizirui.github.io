@@ -1,12 +1,12 @@
 ---
 # Display name
-title: Yizirui Fang
+title: Easey (Yizirui) Fang
 
 # Name pronunciation (optional)
 name_pronunciation: Easir Rey Fang
 
 # Full name (for SEO)
-first_name: Yizirui
+first_name: Easey (Yizirui)
 last_name: Fang
 
 # Status emoji
