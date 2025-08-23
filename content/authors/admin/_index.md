@@ -21,8 +21,8 @@ highlight_name: true
 
 # Role/position/tagline
 role: "(they/them) <br>
-
-Master Student"
+Master Graduate <br>
+SDE"
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -47,8 +47,8 @@ profiles:
   #   url: https://orcid.org/
 
 interests:
-  - Embodied AI
   - Human-centered Machine Learning
+  - Embodied AI
   - Bayesian Decision Making
   - Robustness under Distribution Shift
   - Uncertainty Quantification
@@ -86,7 +86,7 @@ work:
     date_end: ''
     summary: |
       Responsibilities include:
-      - Developed RESTful APIs and Java packages for Amazon’s global warehouses inventory controlership management, tracking system with Java, Ant,Jackson, Mockito and AWS in collaboration with 2 cross-functional teams
+      - Designed and productionized code-gen agents SFT pipeline for domain-specific languages with AWS Bedrock, SageMaker, and LangChain in collaboration with 2 cross-functional teams 
   - position: Research Assistant
     company_name: Social Cognitive AI (SCAI) Lab at Johns Hopkins University
     company_url: ''
@@ -193,4 +193,4 @@ languages:
 
 ## About Me
 
-Yizirui Fang is a recent CS Master graduate from Johns Hopkins University. They are passionate about human-centered machine learning and its application. To this end, they expanded my interest in  embodied AI, trustworthy and probabilistic machine learning and uncertainty quantification including conformal prediction.
+Yizirui Fang is a recent CS Master graduate from Johns Hopkins University and current SDE at Amazon for AI Agent for Code-Gen and conversation. They are passionate about human-centered machine learning and its application. To this end, they expanded my interest in  embodied AI, trustworthy and probabilistic machine learning and uncertainty quantification including conformal prediction.
