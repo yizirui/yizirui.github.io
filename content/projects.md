@@ -11,8 +11,8 @@ design:
 sections:
   - block: collection
     content:
-      title: Selected Projects
-      text: I enjoy making things. Here are a selection of projects that I have worked on over the years.
+      title: Selected Machine Learning Projects
+      text: Machine learning projects selected for hiring-manager review. Each page highlights the scientific problem, method, evaluation signal, and related paper or artifact when public.
       filters:
         folders:
           - project

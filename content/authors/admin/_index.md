@@ -11,7 +11,7 @@ last_name: Fang
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: ""
 
 # Is this the primary user of the site?
 superuser: true
@@ -21,8 +21,8 @@ highlight_name: true
 
 # Role/position/tagline
 role: "(they/them) <br>
-Master Graduate <br>
-SDE"
+Amazon SDE and Applied ML Researcher <br>
+LLM Agents | Embodied AI | Uncertainty"
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -47,11 +47,12 @@ profiles:
   #   url: https://orcid.org/
 
 interests:
+  - LLM Agents and Tool Use
+  - Post-training and Evaluation
   - Human-centered Machine Learning
   - Embodied AI
-  - Bayesian Decision Making
-  - Robustness under Distribution Shift
   - Uncertainty Quantification
+  - Robust Decision Making
 
 education:
   - area: MS Eng in Computer Science
@@ -85,8 +86,9 @@ work:
     date_start: 2024-12-30
     date_end: ''
     summary: |
-      Responsibilities include:
-      - Designed and productionized code-gen agents SFT pipeline for domain-specific languages with AWS Bedrock, SageMaker, and LangChain in collaboration with 2 cross-functional teams 
+      Applied science and engineering focus:
+      - Designed and productionized data and training pipelines for code-generation agents targeting domain-specific languages, using AWS Bedrock, SageMaker, LangChain, and Python.
+      - Collaborated with cross-functional engineering and science partners to improve agent tool-use workflows, retrieval quality, and evaluation coverage for production-facing code generation.
   - position: Research Assistant
     company_name: Social Cognitive AI (SCAI) Lab at Johns Hopkins University
     company_url: ''
@@ -94,9 +96,9 @@ work:
     date_start: 2024-01-01
     date_end: ''
     summary: |2-
-      Responsibilities include:
-      - Pending ICRA pubication, AAAI Symposium pubication accepted: UnclearInstruct: An Embodied Assistance Challenge
-      - Proposed a Spoken Instruction Following through Theory of Mind (SIFToM) model to interpreate acoustic wave and human auditory perception to infer robot goals via Bayesian inverse planning algorithm’ on simulated and real-world data advised by Prof. Tianmin Shu at Johns Hopkins University
+      Applied science and research focus:
+      - Studied embodied assistance and spoken instruction following with theory-of-mind models, Bayesian inverse planning, and simulated/real-world robot task data.
+      - Contributed to research artifacts on embodied AI and human-centered AI, including SIFToM and UnclearInstruct, advised by Prof. Tianmin Shu at Johns Hopkins University.
   - position: Research Assistant
     company_name: Learning to Defer with an Uncertain Rejector via Conformal Prediction
     company_url: ''
@@ -104,13 +106,10 @@ work:
     date_start: 2024-01-01
     date_end: ''
     summary: |
-      Responsibilities include:
-      - Proposed a uncertainty-based distribution-free post-train component for learning to defer in enhancing the collaborative performance of human and AI team and rendering safer decisions on tasks ranging from object to hate speech detection via uncertainly quantification, advised by Prof. Eric Nalisnick at Johns Hopkins University
-      - Developed surrogate loss functions in Bayesion sub-optimal approaches for learning to defer problem on wide ResNet, human expert simulators and data augmentation with PyTorch
-      - Proposed active learning pipeline with uncertainty quantification methods including batch ensemble, SNGP, MC-Dropout, and BNN for Wide ResNet on CIFAR-10/100 dataset using TensorFlow and Python
-      - Developed and automated experiments on CIFAR10 w/ corruption, human, Hate Speech, and Street View dataset
-      - Surveyed distribution shift on wide ResNet using OpenCV and visualized using matplotlib and seaborn
-      - Automated and distributed experiments over GPUs with Slurm, Shell, and Docker at Linux HPC
+      Applied science and research focus:
+      - Proposed an uncertainty-aware, distribution-free post-training rejector for learning to defer, improving human-AI collaboration on object recognition and hate-speech detection tasks.
+      - Developed surrogate losses and baselines for learning-to-defer experiments with Wide ResNet, human expert simulators, data augmentation, and PyTorch.
+      - Built experiment pipelines for uncertainty quantification and distribution shift, including batch ensembles, SNGP, MC-Dropout, Bayesian neural networks, CIFAR-10/100 corruption tests, and GPU/HPC automation with Slurm, Shell, and Docker.
   - position: Research Assistant
     company_name: Augmentation for Distribution Drift in Credit Scoring
     company_url: ''
@@ -118,11 +117,10 @@ work:
     date_start: 2024-12-30
     date_end: ''
     summary: |
-      Responsibilities include:
-      - Proposed data augmentation algorithms with kernel density estimation against distribution drift of credit scoring models, and improve the AUC of ML models from 0.73 to 0.85 with LightGBM and PyTorch under various economic factors
-      - Surveyed credit risk models in gradient boosting, neural network algorithm with Python, PyTorch, NumPy
-      - Analysis and visualize experimental data statistically with Pandas and matplotlib
-      - Created large-scale databases for ∼2 bn financial time-series data points with Spark and SQLAlchemy
+      Applied science and research focus:
+      - Proposed data augmentation algorithms with kernel density estimation to reduce distribution drift in credit scoring models, improving AUC from 0.73 to 0.85 under varying economic factors.
+      - Benchmarked gradient boosting and neural-network credit risk models with Python, PyTorch, LightGBM, NumPy, Pandas, and matplotlib.
+      - Built large-scale financial time-series datasets with Spark and SQLAlchemy across approximately 2B data points.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -133,14 +131,22 @@ skills:
         description: ''
         percent: 80
         icon: code-bracket
-      - name: Torch
+      - name: PyTorch
         description: ''
-        percent: 40
+        percent: 80
         icon: circle-stack
-      - name: JavaScript
+      - name: AWS Bedrock / SageMaker
         description: ''
-        percent: 40
-        icon: code-bracket
+        percent: 70
+        icon: cloud
+      - name: LangChain / Agent Tooling
+        description: ''
+        percent: 70
+        icon: command-line
+      - name: Uncertainty Quantification
+        description: ''
+        percent: 75
+        icon: chart-bar
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
@@ -193,4 +199,6 @@ languages:
 
 ## About Me
 
-Yizirui Fang is a recent CS Master graduate from Johns Hopkins University and current SDE at Amazon for AI Agent for Code-Gen and conversation. They are passionate about human-centered machine learning and its application. To this end, they expanded my interest in  embodied AI, trustworthy and probabilistic machine learning and uncertainty quantification including conformal prediction.
+I am an Amazon SDE and applied ML researcher focused on reliable AI agents, embodied/human-centered AI, and uncertainty-aware decision systems. I am interested in work that combines production-grade agentic systems, agentic RL, rigorous model evaluation, and trustworthy agents.
+
+My strongest through-line is turning ambiguous model behavior into measurable scientific problems: code-generation agents and tool-use workflows in production settings, spoken instruction following for embodied agents, learning-to-defer systems for human-AI collaboration, and conformal prediction under data and distribution shifts.
