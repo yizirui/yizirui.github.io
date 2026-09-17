@@ -1,5 +1,6 @@
 ---
 title: 'Projects'
+summary: 'Machine learning projects by Yizirui Fang: learning to defer, embodied instruction following, human-centered AI, and conformal prediction, with papers and public artifacts.'
 date: 2024-05-19
 type: landing
 
@@ -12,7 +13,7 @@ sections:
   - block: collection
     content:
       title: Selected Machine Learning Projects
-      text: Machine learning projects selected for hiring-manager review. Each page highlights the scientific problem, method, evaluation signal, and related paper or artifact when public.
+      text: Research projects on human–AI decisions, embodied instruction following, and uncertainty quantification, with methods, evaluation, and links to papers and public artifacts.
       filters:
         folders:
           - project

@@ -1,8 +1,7 @@
 ---
 title: Investigating Data Usage for Inductive Conformal Predictors
-date: 2024-06-01
+date: 2024-06-18
 summary: Studying how data allocation choices affect inductive conformal prediction, calibration behavior, and uncertainty guarantees.
-external_link: https://arxiv.org/abs/2406.12262
 tags:
   - Conformal Prediction
   - Uncertainty Quantification
@@ -15,20 +14,16 @@ links:
     url: https://arxiv.org/abs/2406.12262
 ---
 
-## Hiring-manager view
+**Publication status:** arXiv preprint, first submitted June 18, 2024. [Read the source and version history](https://arxiv.org/abs/2406.12262).
 
-This paper is a direct uncertainty-quantification signal: it studies the data and calibration choices behind conformal prediction rather than treating uncertainty estimates as a black box.
+## Research question
 
-## Scientific problem
-
-Inductive conformal predictors rely on data splits and calibration sets to produce uncertainty-aware prediction sets. The practical question is how data usage decisions affect validity, efficiency, and downstream model behavior.
+How should limited development data be allocated between training and calibration, and what happens when those sets overlap?
 
 ## Method
 
-- Investigated how data allocation choices influence inductive conformal prediction.
-- Focused on calibration behavior, data efficiency, and prediction-set quality.
-- Connected empirical model behavior to uncertainty guarantees relevant to safety-sensitive ML systems.
+The experiments use an inductive conformal predictor around a neural-network classifier on Covtype. They vary training/calibration allocation, development-set size, and overlap, using repeated randomized splits to examine coverage and prediction-set size.
 
-## Evaluation signal
+## Results and scope
 
-The evaluation centers on how calibration and data usage choices change uncertainty quality and reliability, especially when model outputs must support downstream decisions.
+Small calibration sets can increase variability. Overlapping training and calibration data can produce smaller prediction sets at the cost of undercoverage. These empirical findings concern one classification dataset; they do not establish a universally optimal split or validate overlapping calibration data in general.

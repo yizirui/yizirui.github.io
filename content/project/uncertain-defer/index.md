@@ -2,6 +2,8 @@
 title: Learning to Defer with an Uncertain Rejector via Conformal Prediction
 date: 2026-02-01
 summary: TMLR 2026 paper on uncertainty-aware learning to defer, using conformal prediction to make human-AI routing safer under rejector uncertainty and distribution shift.
+aliases:
+  - /projects/conformal_l2d/
 tags:
   - Human-in-the-loop ML
   - Uncertainty Quantification
@@ -9,15 +11,21 @@ tags:
   - Learning to Defer
   - Human-AI Collaboration
 links:
-  - name: Project
-    url: https://yiziruifang.com/projects/conformal_l2d/
+  - name: Publication
+    url: /publication/fang-2026-learning-tmlr/
   - name: TMLR
     url: https://openreview.net/forum?id=SZQJ8K2DUe
   - name: PDF
     url: https://openreview.net/pdf?id=SZQJ8K2DUe
+  - name: Code
+    url: https://github.com/yizirui/conformal_L2D
 ---
 
-## Abstract-level summary
+**Publication:** Transactions on Machine Learning Research, February 2026. The [reviewed paper](https://openreview.net/forum?id=SZQJ8K2DUe) and [research code](https://github.com/yizirui/conformal_L2D) are public. An earlier [NeurIPS 2024 workshop version](/publication/fang-2024-learning-workshop/) is listed separately.
+
+## Research question
+
+How should a human–AI system act when the component assigning responsibility to a model or expert is itself uncertain?
 
 Learning to defer routes each input to either a machine learning model or a human expert. This paper studies a failure mode in that routing layer: the rejector can itself be misspecified, poorly calibrated, or brittle under shift. We apply conformal prediction to the rejector so it can express uncertainty through deferral sets instead of returning only a hard defer-or-predict decision.
 
@@ -39,7 +47,7 @@ The standard learning-to-defer workflow depends on a rejector that chooses betwe
 - Tested abstention, consensus prediction, human-preferred routing, and model-preferred routing workflows.
 - Ran experiments across CIFAR-10, HAM10000, and Hate Speech settings, including distribution-shift stress tests.
 
-## Main tables
+## Evaluation
 
 The first table shows that conformal rejectors can achieve the target coverage level while keeping deferral sets compact across image and text classification tasks.
 
@@ -61,6 +69,6 @@ The final comparison plots non-abstention accuracy against how often the system 
 
 ![Accuracy coverage comparison](figure-3-accuracy-coverage.png)
 
-## Why it matters
+## Scope
 
-This project is a human-in-the-loop ML signal: it turns the human/model routing decision into an uncertainty-aware component with measurable coverage, calibration, and robustness properties. For applied scientist review, the strongest evidence is the connection between a practical system failure mode, a distribution-free uncertainty method, and experiments that evaluate behavior under realistic shift.
+The reported experiments concern classification tasks with model and expert predictions. Abstention withholds a decision, while consensus checking requires both predictions. Their accuracy therefore needs to be considered alongside the fraction of decisions returned and the frequency of expert consultation.

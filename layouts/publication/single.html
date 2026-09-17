@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="publication-record mx-auto max-w-6xl px-6 pt-4 pb-8">
+  <header>
+    <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">{{ .Title }}</h1>
+    <p class="mt-3 citation-author">{{ delimit .Params.authors ", " }}</p>
+    <p class="mt-2">{{ .Params.publication | markdownify }} · {{ .Date.Format "2006" }}</p>
+  </header>
+
+  <section aria-labelledby="abstract-heading" class="mt-6">
+    <h2 id="abstract-heading" class="text-2xl font-bold">Abstract</h2>
+    <p id="paper-abstract" class="mt-3">{{ .Params.abstract | strings.TrimSpace }}</p>
+    {{ with .Params.abstract_source }}
+    <p class="mt-3 text-sm">Abstract source: <a href="{{ . }}">{{ $.Params.abstract_source_label }}</a>.</p>
+    {{ end }}
+    {{ with .Params.abstract_license_url }}<p class="text-sm">Abstract license: <a href="{{ . }}">{{ $.Params.abstract_license }}</a>.</p>{{ end }}
+  </section>
+
+  <nav aria-label="Paper and citation resources" class="mt-6">
+    <ul>
+      {{ with .Params.url_pdf }}<li><a href="{{ . | absURL }}">Read the paper (PDF)</a></li>{{ end }}
+      {{ with .Params.pdf_source }}<li><a href="{{ . }}">Original PDF source</a></li>{{ end }}
+      {{ with .Resources.GetMatch "cite.bib" }}<li><a href="{{ .RelPermalink }}">Download BibTeX citation</a></li>{{ end }}
+      {{ range .Params.links }}<li><a href="{{ .url | relURL }}">{{ .name }}</a></li>{{ end }}
+    </ul>
+  </nav>
+
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert mt-6">{{ .Content }}</div>
+  <aside aria-label="Research topics" class="mt-6">
+    {{ with .Params.tags }}<p>Topics: {{ delimit . "; " }}.</p>{{ end }}
+    <p><a href="{{ "research/" | relURL }}">Explore papers by research topic</a> · <a href="{{ "publication/" | relURL }}">All publications</a></p>
+  </aside>
+</article>
+{{ end }}

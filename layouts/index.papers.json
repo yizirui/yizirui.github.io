@@ -1,0 +1,13 @@
+{{- $papers := slice -}}
+{{- range (where site.RegularPages "Section" "publication").ByDate.Reverse -}}
+  {{- $bibtex := "" -}}
+  {{- with .Resources.GetMatch "cite.bib" -}}{{- $bibtex = .Permalink -}}{{- end -}}
+  {{- $paper := dict "title" .Title "url" .Permalink "abstract" (strings.TrimSpace (.Params.abstract | default "")) "abstract_source" .Params.abstract_source "abstract_source_label" .Params.abstract_source_label "authors" .Params.authors "year" (.Date.Format "2006") "venue" (.Params.publication | markdownify | plainify) "pdf" (.Params.url_pdf | absURL) "bibtex" $bibtex "topics" .Params.tags "research_topics" .Params.research_topics -}}
+  {{- $paper = merge $paper (dict "summary" .Params.summary) -}}
+  {{- with .Params.doi -}}{{- $paper = merge $paper (dict "doi" .) -}}{{- end -}}
+  {{- with .Params.pdf_source -}}{{- $paper = merge $paper (dict "pdf_source" .) -}}{{- end -}}
+  {{- $license := .Params.abstract_license -}}
+  {{- with .Params.abstract_license_url -}}{{- $paper = merge $paper (dict "abstract_license" $license "abstract_license_url" .) -}}{{- end -}}
+  {{- $papers = $papers | append $paper -}}
+{{- end -}}
+{{- dict "owner" site.Title "url" ("papers.json" | absURL) "papers" $papers | jsonify -}}

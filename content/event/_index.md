@@ -1,5 +1,8 @@
 ---
 title: Recent & Upcoming Talks
+draft: true
+cascade:
+  draft: true
 cms_exclude: true
 #url: talk
 

@@ -50,7 +50,9 @@ jobs:
         HUGO_ENVIRONMENT: production
       run: |
         echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-        hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        hugo --minify --cleanDestinationDir
+    - name: Verify discovery and citation metadata
+      run: python3 scripts/check_agent_discovery.py public
     - name: Generate Pagefind search index
       run: npx pagefind --site "public"
     - name: Upload artifact

@@ -1,5 +1,6 @@
 ---
 title: 'Experience'
+summary: 'Yizirui Fang’s engineering and research experience in LLM agents, embodied AI, uncertainty quantification, and human-AI collaboration.'
 date: 2023-10-24
 type: landing
 

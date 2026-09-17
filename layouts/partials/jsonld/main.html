@@ -1,0 +1,39 @@
+{{- /* Override the theme's generic Article/Organization markup with source-backed entities. */ -}}
+{{- $page := .page -}}
+{{- $profile := site.GetPage "/authors/admin" -}}
+{{- $personID := printf "%s#person" site.Home.Permalink -}}
+{{- $websiteID := printf "%s#website" site.Home.Permalink -}}
+{{- $sameAs := slice -}}
+{{- range $profile.Params.profiles -}}
+  {{- if hasPrefix .url "https://" -}}{{- $sameAs = $sameAs | append .url -}}{{- end -}}
+{{- end -}}
+{{- $person := dict "@type" "Person" "@id" $personID "name" site.Title "alternateName" (slice $profile.Title "Easey Fang") "url" site.Home.Permalink "sameAs" $sameAs "jobTitle" $profile.Params.schema_job_title -}}
+{{- $nodes := slice -}}
+{{- if $page.IsHome -}}
+  {{- $website := dict "@type" "WebSite" "@id" $websiteID "url" site.Home.Permalink "name" site.Title "description" .summary "inLanguage" site.Language.LanguageCode "publisher" (dict "@id" $personID) -}}
+  {{- $profilePage := dict "@type" "ProfilePage" "@id" (printf "%s#webpage" $page.Permalink) "url" $page.Permalink "name" site.Title "mainEntity" (dict "@id" $personID) "isPartOf" (dict "@id" $websiteID) -}}
+  {{- $nodes = slice $website $profilePage $person -}}
+{{- else if and $page.IsPage (in (slice "project" "publication") $page.Section) -}}
+  {{- $kind := "CreativeWork" -}}
+  {{- $authors := slice (dict "@type" "Person" "@id" $personID "name" site.Title) -}}
+  {{- if eq $page.Section "publication" -}}
+    {{- $kind = "ScholarlyArticle" -}}
+    {{- $authors = slice -}}
+    {{- range $page.Params.authors -}}
+      {{- $author := dict "@type" "Person" "name" . -}}
+      {{- if eq . site.Title -}}{{- $author = merge $author (dict "@id" $personID "url" site.Home.Permalink) -}}{{- end -}}
+      {{- $authors = $authors | append $author -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $work := dict "@type" $kind "@id" (printf "%s#work" $page.Permalink) "url" $page.Permalink "name" $page.Title "headline" $page.Title "description" (.summary | plainify) "author" $authors "inLanguage" site.Language.LanguageCode "mainEntityOfPage" (dict "@type" "WebPage" "@id" $page.Permalink) -}}
+  {{- with $page.Params.abstract -}}{{- $work = merge $work (dict "abstract" (strings.TrimSpace .)) -}}{{- end -}}
+  {{- with $page.Params.tags -}}{{- $work = merge $work (dict "keywords" .) -}}{{- end -}}
+  {{- if not $page.Date.IsZero -}}{{- $work = merge $work (dict "datePublished" ($page.Params.publication_date | default ($page.Date.Format "2006"))) -}}{{- end -}}
+  {{- with $page.Params.publication -}}{{- $work = merge $work (dict "isPartOf" (dict "@type" "CreativeWork" "name" (. | markdownify | plainify))) -}}{{- end -}}
+  {{- with $page.Params.doi -}}{{- $work = merge $work (dict "identifier" (dict "@type" "PropertyValue" "propertyID" "DOI" "value" .)) -}}{{- end -}}
+  {{- with $page.Params.url_pdf -}}{{- $work = merge $work (dict "encoding" (dict "@type" "MediaObject" "encodingFormat" "application/pdf" "contentUrl" (. | absURL))) -}}{{- end -}}
+  {{- $nodes = slice $work -}}
+{{- end -}}
+{{- with $nodes }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" . | jsonify | safeJS }}</script>
+{{ end -}}

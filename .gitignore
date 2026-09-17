@@ -1,2 +1,12 @@
 public/*
 resources/*
+
+# Local notes and tooling
+/docs/
+/graphify-out/
+/.codex/
+/AGENTS.md
+
+# Python cache
+__pycache__/
+*.py[cod]

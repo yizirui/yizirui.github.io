@@ -1,13 +1,13 @@
 ---
 title: Teaching
+draft: true
 summary: My courses
 type: landing
 
 cascade:
-  - _target:
-      kind: page
-    params:
-      show_breadcrumb: true
+  draft: true
+  params:
+    show_breadcrumb: true
 
 sections:
   - block: collection

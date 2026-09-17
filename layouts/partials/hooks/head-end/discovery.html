@@ -1,0 +1,25 @@
+<link rel="describedby" type="text/plain" href="{{ "llms.txt" | absURL }}" title="Plain-text site index" />
+<link rel="alternate" type="application/json" href="{{ "papers.json" | absURL }}" title="Paper catalog with abstracts" />
+{{ with .OutputFormats.Get "Markdown" }}
+<link rel="alternate" type="text/markdown" href="{{ .Permalink }}" title="Markdown version" />
+{{ end }}
+{{ if and .IsPage (eq .Section "publication") }}
+<meta name="citation_title" content="{{ .Title }}" />
+{{ range .Params.authors }}<meta name="citation_author" content="{{ . }}" />
+{{ end }}
+{{/* Use the supported publication year rather than an inferred scheduling day. */}}
+<meta name="citation_publication_date" content="{{ .Date.Format "2006" }}" />
+<meta name="citation_public_url" content="{{ .Permalink }}" />
+{{/* Scholar only associates a PDF through this tag when it shares the abstract's directory. */}}
+{{ with .Params.url_pdf }}{{ $pdf := . | absURL }}{{ if hasPrefix $pdf $.Permalink }}<meta name="citation_pdf_url" content="{{ $pdf }}" />{{ end }}{{ end }}
+{{ if in .Params.publication_types "article-journal" }}
+<meta name="citation_journal_title" content="{{ .Params.publication | markdownify | plainify }}" />
+{{ else if in .Params.publication_types "paper-conference" }}
+<meta name="citation_conference_title" content="{{ .Params.citation_conference_title | default (.Params.publication | markdownify | plainify) }}" />
+{{ end }}
+{{ with .Params.citation_volume }}<meta name="citation_volume" content="{{ . }}" />{{ end }}
+{{ with .Params.citation_firstpage }}<meta name="citation_firstpage" content="{{ . }}" />{{ end }}
+{{ with .Params.citation_lastpage }}<meta name="citation_lastpage" content="{{ . }}" />{{ end }}
+{{ with .Params.doi }}<meta name="citation_doi" content="{{ . }}" />{{ end }}
+{{ with .Resources.GetMatch "cite.bib" }}<link rel="alternate" type="application/x-bibtex" href="{{ .Permalink }}" title="BibTeX citation" />{{ end }}
+{{ end }}

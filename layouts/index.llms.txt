@@ -1,0 +1,39 @@
+# {{ site.Title }}
+
+> {{ site.Params.marketing.seo.description }}
+
+This is Yizirui (Easey) Fang's personal research and engineering website.
+Publication records include abstracts, citations, and links to papers and code.
+The TMLR 2026 and NeurIPS 2024 workshop entries for Learning to Defer are versions of the same research.
+
+## Start here
+
+{{ with site.GetPage "/research" }}- [Research topics]({{ .Permalink }}): find papers by research question, method, and scope.
+{{ with .OutputFormats.Get "Markdown" }}- [Research topics in Markdown]({{ .Permalink }})
+{{ end }}{{ end }}
+- [Paper catalog with complete abstracts]({{ "papers.json" | absURL }}): JSON records containing authors, venue, abstract source, PDF, and BibTeX URLs.
+- [Profile]({{ site.Home.Permalink }}): biography, research interests, selected work, and profile links.
+- [Profile in Markdown]({{ (site.Home.OutputFormats.Get "Markdown").Permalink }}): a text version generated from the same content.
+{{ range slice "/projects" "/experience" }}{{ with site.GetPage . }}{{ $title := .Title }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.summary }}
+{{ with .OutputFormats.Get "Markdown" }}- [{{ $title }} in Markdown]({{ .Permalink }})
+{{ end }}{{ end }}{{ end }}
+
+## Projects
+{{ range (where site.RegularPages "Section" "project").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.summary }}
+{{ with .OutputFormats.Get "Markdown" }}- [Project in Markdown]({{ .Permalink }})
+{{ end }}{{ end }}
+
+## Publications
+{{ range (where site.RegularPages "Section" "publication").ByDate.Reverse }}
+- [{{ .Title }} — {{ .Date.Format "2006" }}]({{ .Permalink }}): {{ .Params.publication | markdownify | plainify }}. {{ .Params.summary }}
+{{ with .OutputFormats.Get "Markdown" }}- [Publication in Markdown]({{ .Permalink }})
+{{ end }}{{ end }}
+
+## Additional resources
+
+- [All publication records]({{ "publication/" | absURL }})
+- [XML sitemap]({{ "sitemap.xml" | absURL }})
+- [RSS feed]({{ "index.xml" | absURL }})
+- [Website source](https://github.com/yizirui/yizirui.github.io)

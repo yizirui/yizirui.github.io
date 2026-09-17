@@ -1,0 +1,85 @@
+# {{ .Title | default site.Title }}
+
+Canonical page: {{ .Permalink }}
+Website owner: {{ site.Title }}
+{{ with .Params.summary }}
+{{ . }}
+{{ end }}
+{{ if .IsHome }}
+{{ with site.GetPage "/authors/admin" }}
+{{ .RawContent }}
+
+## Research interests
+{{ range .Params.interests }}
+- {{ . }}
+{{ end }}
+{{ end }}
+## Projects
+{{ range (where site.RegularPages "Section" "project").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.summary }}
+{{ end }}
+## Publications
+{{ range (where site.RegularPages "Section" "publication").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}) — {{ .Params.publication | markdownify | plainify }}, {{ .Date.Format "2006" }}.
+{{ end }}
+{{ else if eq .RelPermalink ("projects/" | relURL) }}
+{{ range (where site.RegularPages "Section" "project").ByDate.Reverse }}
+## [{{ .Title }}]({{ .Permalink }})
+
+{{ .Params.summary }}
+{{ end }}
+{{ else if eq .RelPermalink ("experience/" | relURL) }}
+{{ with site.GetPage "/authors/admin" }}
+## Experience
+{{ range .Params.work }}
+### {{ .position }} — {{ .company_name }}
+
+{{ .summary }}
+{{ end }}
+## Education
+{{ range .Params.education }}
+- {{ .area }}, {{ .institution }}
+{{ end }}
+{{ end }}
+{{ else }}
+{{ with .Params.authors }}Authors: {{ delimit . ", " }}
+{{ end }}
+{{ if and .IsPage (eq .Section "publication") }}Publication date: {{ .Params.publication_date | default (.Date.Format "2006") }}
+{{ with .Params.publication }}Venue / version: {{ . | markdownify | plainify }}
+{{ end }}{{ end }}
+{{ with .Params.doi }}DOI: https://doi.org/{{ . }}
+{{ end }}
+{{ with .Params.abstract }}
+## Abstract
+
+{{ . | strings.TrimSpace }}
+
+{{ end }}
+{{ with .Params.abstract_source }}
+Abstract source: [{{ $.Params.abstract_source_label }}]({{ . }}).
+
+{{ end }}
+{{ with .Params.abstract_license_url }}Abstract license: [{{ $.Params.abstract_license }}]({{ . }}).
+{{ end }}
+{{ if or .Params.links .Params.url_pdf }}
+## Sources and artifacts
+{{ with .Params.url_pdf }}
+- [Paper PDF]({{ . | absURL }})
+{{ end }}
+{{ with .Params.pdf_source }}
+- [Original PDF source]({{ . }})
+{{ end }}
+{{ range .Params.links }}
+- [{{ .name }}]({{ .url | absURL }})
+{{ end }}
+{{ end }}
+{{ with .Resources.GetMatch "cite.bib" }}
+- [BibTeX citation]({{ .Permalink }})
+{{ end }}
+
+{{ .RawContent }}
+{{ end }}
+
+---
+
+[All papers]({{ "publication/" | absURL }}) · [Research]({{ "research/" | absURL }})

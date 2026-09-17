@@ -1,7 +1,11 @@
 ---
 # Leave the homepage title empty to use the site title
 title: ""
-date: 2022-10-24
+date: 2026-09-16
+lastmod: 2026-09-17
+summary: "Yizirui (Easey) Fang: Amazon SDE and applied ML researcher working on reliable LLM agents, embodied AI, conformal prediction, and human-AI collaboration. Explore projects, papers, and public evidence."
+seo:
+  title: 'Yizirui Fang | LLM Agents, Embodied AI & Uncertainty'
 type: landing
 
 design:
@@ -16,7 +20,7 @@ sections:
       text: ""
       # Show a call-to-action button under your biography? (optional)
       button:
-        text: Download CV
+        text: Archived Academic CV
         url: uploads/Yizirui_Fang_PhD_CV_EmbodiedAI.pdf
     design:
       css_class: dark
@@ -34,7 +38,7 @@ sections:
     id: projects
     content:
       title: Selected Machine Learning Projects
-      text: "Technical projects are written for fast hiring-manager review: problem, method, evaluation signal, and publication or artifact links where available."
+      text: "Research in uncertainty-aware decisions, embodied AI, and human–AI collaboration, with related papers and code."
       filters:
         folders:
           - project
@@ -45,8 +49,8 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Publication
-      text: "Research outputs spanning uncertainty-aware decision making, embodied AI, human-centered AI, and conformal prediction."
+      title: Papers and Abstracts
+      text: "Papers on learning to defer, conformal prediction, embodied instruction following, and human-centered AI. Explore the [research themes](/research/)."
       filters:
         folders:
           - publication

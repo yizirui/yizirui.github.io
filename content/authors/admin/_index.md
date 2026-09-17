@@ -8,6 +8,7 @@ name_pronunciation: Easir Rey Fang
 # Full name (for SEO)
 first_name: Easey (Yizirui)
 last_name: Fang
+schema_job_title: Amazon SDE and Applied ML Researcher
 
 # Status emoji
 status:
@@ -202,3 +203,5 @@ languages:
 I am an Amazon SDE and applied ML researcher focused on reliable AI agents, embodied/human-centered AI, and uncertainty-aware decision systems. I am interested in work that combines production-grade agentic systems, agentic RL, rigorous model evaluation, and trustworthy agents.
 
 My strongest through-line is turning ambiguous model behavior into measurable scientific problems: code-generation agents and tool-use workflows in production settings, spoken instruction following for embodied agents, learning-to-defer systems for human-AI collaboration, and conformal prediction under data and distribution shifts.
+
+I publish research as **Yizirui Fang** and also go by **Easey Fang**. Find my work on [GitHub](https://github.com/yizirui), [Google Scholar](https://scholar.google.com/citations?user=C9Wb_2cAAAAJ&hl=en), and [LinkedIn](https://www.linkedin.com/in/easey-f/).

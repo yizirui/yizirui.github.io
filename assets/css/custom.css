@@ -1,0 +1,7 @@
+/* Keep paper abstracts readable without interaction or a large decorative header. */
+.publication-record { max-width: 72rem; margin-inline: auto; padding: 2rem 1.5rem; }
+.publication-record h1 { font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.2; }
+.publication-record #paper-abstract { font-size: 1rem; line-height: 1.65; white-space: pre-line; }
+.publication-record a { text-decoration: underline; text-underline-offset: 0.15em; }
+.publication-record nav ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; list-style: none; padding: 0; }
+.publication-record .prose { max-width: 75ch; }
